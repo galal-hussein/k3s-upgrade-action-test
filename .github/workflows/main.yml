@@ -1,0 +1,8 @@
+name: CI
+
+on: [repository_dispatch]
+jobs:
+  CreateATag:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.client_payload }}
