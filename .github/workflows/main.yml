@@ -5,4 +5,8 @@ jobs:
   CreateATag:
     runs-on: ubuntu-latest
     steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - run: echo ${{ github.event.client_payload.sha }}
+      - run: echo ${{ github.event.client_payload.ref }}
       - run: echo ${{ github.event.client_payload }}
